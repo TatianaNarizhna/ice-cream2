@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font-family;
+  letter-spacing: 0.04em;
+  color: $text-color;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+// добавлено Сергеем
+.list {
+  list-style: none;
+}
+
+.not-for-mobile {
+  display: none;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.not-for-desktop {
+  display: block;
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.only-for-desktop {
+  display: none;
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+#toTop {
+  width: 40px;
+  // border: 1px solid $pink-color;
+  background: #efe3e5;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+  color: $pink-lila;
+  font-family: verdana;
+  font-size: 25px;
+}
+// Конец добавленного
